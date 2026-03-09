@@ -88,4 +88,3 @@ loadIssues();
 
 
 
-console.log("how");
