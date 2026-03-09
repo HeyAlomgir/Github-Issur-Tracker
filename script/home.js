@@ -55,7 +55,30 @@ async function loadIssues() {
 
 
 // button color
+const Btn = (status) => {
+  const allBtn = document.getElementById("all-Btn")
+  const openBtn = document.getElementById("open-Btn")
+  const closeBtn = document.getElementById("close-Btn")
+  if(status === "all"){
+    allBtn.classList.add("btn-primary")
+    openBtn.classList.remove("btn-primary")
+    closeBtn.classList.remove("btn-primary")
+  }
+  else if(status === "open"){
+    allBtn.classList.remove("btn-primary")
+    openBtn.classList.add("btn-primary")
+    closeBtn.classList.remove("btn-primary")
+  }
 
+  else{
+    allBtn.classList.remove("btn-primary")
+    openBtn.classList.remove("btn-primary")
+    closeBtn.classList.add("btn-primary")
+  }
+
+ 
+
+}
 
 
 loadIssues();
