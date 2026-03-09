@@ -4,8 +4,119 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+     <!-- daisiui and tailwind -->
+     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+
+<!-- google font -->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <h1>Welcome my homepeg</h1>
+    <header>
+         <section class="shadow bg-white navbar flex justify-between md:px-20">
+  
+        <!-- Left side -->
+        <div class="flex justify-center gap-2 items-center ">
+          <div>
+            <img class="w-5" src="./assets/github-logo.png" alt="" />
+          </div>
+          <div>
+            <p class="text-[10px] md:text-[18px] md:font-bold">
+              GitHub Issues Tracker
+            </p>
+          </div>
+        </div>
+        <!-- right side -->
+        <div class="flex gap-3">
+          <div class="search">
+            <label class="input">
+              <input id="input-search" type="text" required placeholder="Search" />
+            </label>
+          </div>
+          <div>
+            <button id="btn-search" class="btn btn-primary"> + New Issue</button>
+          </div>
+        </div>
+      
+    </section>
+    </header>
+
+    <!-- open && close btn -->
+
+     <section class="md:px-40  py-5 flex gap-3">
+      <div>
+        <button id="all-Btn" onclick="Btn('all')" class="lg:w-[130px] h-[50px] btn btn-primary">All</button>
+      </div>
+      <div>
+        <button id="open-Btn" onclick="Btn('open')" class="lg:w-[120px] h-[50px] btn">
+          Open
+        </button>
+      </div>
+      <div>
+        <button id="close-Btn" onclick="Btn('close')" class="lg:w-[120px] h-[50px] btn">
+          Closed
+        </button>
+      </div>
+    </section>
+
+
+
+    <!-- main section -->
+
+
+
+     <main class="sm:px-2 md:px-10 lg:px-40">
+      <!-- text -->
+      <div
+        class="bg-white border border-amber-50 shadow-2xl rounded-xl flex justify-between items-center"
+      >
+        <!-- left -->
+        <div class="flex items-center p-4 gap-4">
+          <div>
+            <img src="./assets/Aperture.png" alt="" />
+          </div>
+
+          <div>
+            <p class="text-xl"><span id="cardCount"> 0 </span> Issues</p>
+            <p class="text-[#64748B]">Track and manage your project issues</p>
+          </div>
+
+        </div>
+
+        <!-- right -->
+        <div class="flex gap-10 p-2">
+          <div class="flex justify-center items-center gap-1">
+            <span
+              ><i class="fa-solid fa-circle" style="color: rgb(0, 169, 110)"></i
+            ></span>
+            <p>Open</p>
+          </div>
+          <div class="flex justify-center items-center gap-1">
+            <span
+              ><i
+                class="fa-solid fa-circle"
+                style="color: rgb(168, 85, 247)"
+              ></i
+            ></span>
+            <p>Closed</p>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- cards -->
+
+    <div id="issue-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 px-4 md:px-20 mt-8">
+ 
+</div>
+
+     
+    </main>
+
+     
+
+<script src="./script/home.js"></script>
 </body>
 </html>
